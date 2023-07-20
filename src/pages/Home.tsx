@@ -72,13 +72,14 @@ function Home() {
   return (
     <div>
       <Navbar />
+
       <Hero />
 
-      <div className="max-w-[1040px] mx-auto">
+      <div className="max-w-[1085px] mx-auto px-3.5">
         <NavigationTabs />
 
-        <div className="flex gap-14">
-          <div className="w-full flex flex-col gap-4 mb-24">
+        <div className="w-full flex gap-8">
+          <div className="w-full flex flex-col gap-4 mb-24 2bp:justify-center 2bp:items-center">
             {/* ** map() posts that contains text description */}
             {postsTextData &&
               postsTextData.map(
@@ -120,7 +121,9 @@ function Home() {
             <PostJob />
           </div>
 
-          <UserLocation />
+          <div className="2bp:hidden">
+            <UserLocation />
+          </div>
         </div>
       </div>
     </div>

@@ -19,7 +19,7 @@ function UserLocation() {
       </div>
 
       <div className="flex gap-1 text-black/50">
-        <p className="text-sm">
+        <p className="text-sm mt-0.5">
           <AiOutlineInfoCircle />
         </p>
         <p className="text-xs">
