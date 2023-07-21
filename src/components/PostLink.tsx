@@ -3,6 +3,7 @@ import { AiOutlineEye } from "react-icons/ai";
 import { IoMdShare } from "react-icons/io";
 import { RiCalendarEventLine } from "react-icons/ri";
 import { MdOutlineLocationOn } from "react-icons/md";
+import { useState } from "react";
 
 interface Props {
   image: string;
@@ -25,6 +26,8 @@ function PostLink({
   avatar,
   user,
 }: Props) {
+  const [showMoreOptions, setShowMoreOptions] = useState(false);
+
   return (
     <div className="w-[692px] h-fit border-[1px] rounded shadow-sm 3bp:w-full">
       <div>
@@ -45,9 +48,21 @@ function PostLink({
 
         <div className="flex justify-between items-center text-xl gap-12 mb-2 4bp:mb-1">
           <h2 className="text-xl font-bold 4bp:text-lg">{title}</h2>
-          <p className="hover:bg-gray-100 rounded-sm p-2 cursor-pointer 4bp:text-sm">
-            <TfiMoreAlt />
-          </p>
+          <div className="relative">
+            <button
+              className="hover:bg-gray-100 rounded-sm p-2 cursor-pointer 4bp:text-sm"
+              onClick={() => setShowMoreOptions(!showMoreOptions)}
+            >
+              <TfiMoreAlt />
+            </button>
+            {showMoreOptions && (
+              <div className="bg-white absolute text-sm shadow-sm w-[160px] p-3 flex flex-col gap-2 z-20 right-[3px]">
+                <p className="hover:font-bold cursor-pointer">Edit</p>
+                <p className="hover:font-bold cursor-pointer">Report</p>
+                <p className="hover:font-bold cursor-pointer">Option 3</p>
+              </div>
+            )}
+          </div>
         </div>
 
         <div className="flex items-center gap-10 font-medium text-sm mb-3 4bp:text-xs">
