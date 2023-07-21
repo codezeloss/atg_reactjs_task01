@@ -7,12 +7,12 @@ function Hero() {
     <div className="w-full relative mt-0 mx-auto mb-[32px] 5bp:mb-0">
       <div>
         <img
-          className="w-full h-auto max-h-[440px] object-cover 6bp:hidden"
+          className="w-full h-auto max-h-[440px] object-cover 5bp:hidden"
           src={heroImg}
           alt="Hero background Image"
         />
         <img
-          className="hidden 6bp:flex 6bp:w-full 6bp:h-auto 6bp:max-h-[440px] 6bp:object-cover"
+          className="hidden 5bp:flex 5bp:w-full 5bp:h-auto 5bp:max-h-[440px] 5bp:object-cover"
           src={heroImgMobile}
           alt="Hero background Image"
         />
@@ -20,7 +20,7 @@ function Hero() {
       </div>
 
       <div>
-        <div className="hidden 6bp:flex w-full pr-11 justify-between items-center text-white absolute top-[10px] left-[20px]">
+        <div className="hidden 5bp:flex justify-between items-center text-white absolute top-[10px] left-[20px] right-[13px]">
           <p className="text-lg">
             <BiArrowBack />
           </p>
@@ -29,7 +29,7 @@ function Hero() {
           </button>
         </div>
 
-        <div className="max-w-[1040px] w-[1040px] flex items-center text-white absolute bottom-[80px] left-[80px] mx-auto 2bp:left-[40px] 2bp:bottom-[40px] 3bp:left-[20px] 4bp:bottom-[20px] 6bp:bottom-[35px]">
+        <div className="w-fit flex items-center text-white absolute bottom-[80px] left-[80px] mx-auto 2bp:left-[40px] 2bp:bottom-[40px] 3bp:left-[20px] 4bp:bottom-[20px] 6bp:bottom-[35px]">
           <div>
             <h1 className="text-4xl font-bold 3bp:text-2xl 4bp:text-xl">
               Computer engineering

@@ -12,7 +12,7 @@ export default {
       screens: {
         "1bp": { max: "1300px" },
         "2bp": { max: "1034px" },
-        "3bp": { max: "720px" },
+        "3bp": { max: "790px" },
         "4bp": { max: "672px" },
         "5bp": { max: "590px" },
         "6bp": { max: "406px" },

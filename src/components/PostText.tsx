@@ -1,6 +1,7 @@
 import { AiOutlineEye } from "react-icons/ai";
 import { IoMdShare } from "react-icons/io";
 import { TfiMoreAlt } from "react-icons/tfi";
+import { useState } from "react";
 
 interface Props {
   image: string;
@@ -21,6 +22,8 @@ function PostText({
   avatar,
   user,
 }: Props) {
+  const [showMoreOptions, setShowMoreOptions] = useState(false);
+
   return (
     <div className="w-[692px] h-fit border-[1px] rounded shadow-sm 3bp:w-full 5bp:border-t-0 5bp:border-l-0 5bp:border-r-0 5bp:border-b-[1px]">
       <div>
@@ -41,9 +44,21 @@ function PostText({
 
         <div className="flex justify-between items-center text-xl mb-2 gap-12 4bp:mb-1 4bp:gap-4">
           <h2 className="text-xl font-bold 4bp:text-lg">{title}</h2>
-          <p className="hover:bg-gray-100 rounded-sm p-2 cursor-pointer 4bp:text-sm">
-            <TfiMoreAlt />
-          </p>
+          <div className="relative">
+            <button
+              className="hover:bg-gray-100 rounded-sm p-2 cursor-pointer 4bp:text-sm"
+              onClick={() => setShowMoreOptions(!showMoreOptions)}
+            >
+              <TfiMoreAlt />
+            </button>
+            {showMoreOptions && (
+              <div className="bg-white absolute text-sm shadow-sm w-[160px] p-3 flex flex-col gap-2 z-20 right-[3px]">
+                <p className="hover:font-bold cursor-pointer">Edit</p>
+                <p className="hover:font-bold cursor-pointer">Report</p>
+                <p className="hover:font-bold cursor-pointer">Option 3</p>
+              </div>
+            )}
+          </div>
         </div>
 
         <p className="mt-2 mb-4 text-zinc-600 text-base font-normal 4bp:text-sm 4bp:mt-0 4bp:mb-0">

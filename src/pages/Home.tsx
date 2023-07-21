@@ -75,7 +75,7 @@ function Home() {
 
       <Hero />
 
-      <div className="max-w-[1085px] mx-auto px-3.5">
+      <div className="max-w-[1085px] w-full mx-auto px-3.5">
         <NavigationTabs />
 
         <div className="w-full flex gap-8">
